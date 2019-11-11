@@ -35,9 +35,10 @@ end
 
 post '/products/:id/delete' do
   @product = Product.find(params[:id])
-  @product.delete
-  redirect to '/products'
+  @product.delete()
+  erb( :"products/delete" )
 end
+
 
 post '/products/:id' do
   product = Product.new(params)

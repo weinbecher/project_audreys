@@ -3,36 +3,36 @@
 <form class="edit-product" action="/products/<%=@product.id  %>" method="post">
 
   <label for="product-name">Product name: </label>
-  <input type="text" name="name" id="product-name" value="<%=@product.name  %>">
+  <input type="text" name="name" id="product-name" value="<%=@product.name  %>" required >
 
   <br/>
 
   <label for="product-description"> Description: </label>
-  <input type="text" name="description" id="product-description" value=" <%=@product.description  %>">
+  <input type="text" name="description" id="product-description" value=" <%=@product.description  %>" required>
 
   <br/>
 
 
   <label for="product-stock"> Stock: </label>
-  <input type="text" name="stock" id="product-stock" value="<%= @product.stock %>">
+  <input type="number" min="1" max="10" name="stock" id="product-stock" value="<%= @product.stock %>" required>
 
   <br/>
 
 
   <label for="product-cost"> Cost: </label>
-  <input type="text" name="cost" id="product-cost" value="<%= @product.cost %>">
+  <input type="number" min="1"name="cost" id="product-cost" value="<%= @product.cost %>" required>
 
   <br/>
 
 
   <label for="product-price"> Price: </label>
-  <input type="text" name="price" id="product-price" value="<%= @product.price %>">
+  <input type="number" min="1" name="price" id="product-price" value="<%= @product.price %>" required>
 
   <br/>
 
 
   <label for="farm-select"> Select Farm: </label>
-    <select class="farm-select" name="farm_id" selected = "<%= @product.farm_id %>">
+    <select class="farm-select" name="farm_id" selected = "<%= @product.farm_id %>" required>
       <% @farms.each do |farm| %>
       <% if farm.id == @product.farm_id %>
       <option value="<%= farm.id %> selected"> <%=farm.name.split.map(&:capitalize).join(' ') %>
@@ -49,8 +49,22 @@
 
   <input type="submit" value="Update Product">
 
-  <form method="post" action="/products/<%= @product.id %>/delete">
-  <input type="submit" value="Delete Product"/>
   </form>
 
-</form>
+
+  <form method="post" action="/products/<%=@product.id %>/delete">
+
+
+  <input onclick="deleteComfirm()" type="submit" value="Delete Product"/>
+
+  <script>
+
+  function deleteComfirm() {
+    confirm(" Are you sure you want to delete this thingy? ");
+  }
+  
+  </script>
+
+
+
+  </form>
