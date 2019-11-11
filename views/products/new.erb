@@ -1,0 +1,42 @@
+<form class="add-product" action="/products" method="post">
+  <label for="product-name">Product name: </label>
+  <input type="text" name="name" id="product-name">
+
+  <br/>
+
+  <label for="product-description"> Description: </label>
+  <input type="text" name="description" id="product-description">
+
+  <br/>
+
+
+  <label for="product-stock"> Stock: </label>
+  <input type="text" name="stock" id="product-stock">
+
+  <br/>
+
+
+  <label for="product-cost"> Cost: </label>
+  <input type="text" name="cost" id="product-cost">
+
+  <br/>
+
+
+  <label for="product-price"> Price: </label>
+  <input type="text" name="price" id="product-price">
+
+  <br/>
+
+
+  <label for="farm-select"> Select Farm: </label>
+    <select class="farm-select" name="farm_id">
+      <% @farms.each do |farm| %>
+        <option value="<%= farm.id %>"><%= farm.name.split.map(&:capitalize).join(' ')%>
+      <% end %>
+        </option>
+    </select>
+
+  <br/>
+
+  <input type="submit" value="Add New Product">
+</form>

@@ -40,7 +40,7 @@ class Farm
   def self.all
     sql = "SELECT * FROM farms"
     farms = SqlRunner.run(sql)
-    return farms.map {|farm| Farm.new(hash) }
+    return farms.map {|farm| Farm.new(farm) }
   end
 
 
