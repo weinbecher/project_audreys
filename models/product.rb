@@ -6,7 +6,7 @@ class Product
 
 
   def initialize(options)
-    @id = options['id'].to_i if options['id']
+    @id = options['id'].to_i
     @name = options['name']
     @description = options ['description']
     @stock = options['stock']
@@ -45,7 +45,7 @@ class Product
   def self.all
     sql = "SELECT * FROM products"
     products = SqlRunner.run(sql)
-    return products.map{|product| Product.new(hash)}
+    return products.map{|product| Product.new(product)}
   end
 
   def self.delete_all
