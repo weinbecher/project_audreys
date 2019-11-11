@@ -16,7 +16,7 @@ CREATE TABLE products
   id SERIAL8 primary key,
   name VARCHAR(255) not null,
   description VARCHAR(255),
-  stock INT4,
+  stock FLOAT,
   cost FLOAT,
   price FLOAT,
   farm_id INT8 references farms(id)

@@ -9,9 +9,23 @@
       </a>
   </h2>
 
-  <p> stock:
-    <%= product.stock  %>
+
+  <p>Stock:
+    <% if product.stock.to_f < 2.0 %>
+    <mark><%= product.stock %></mark>
+    <mark><%= "low stock" %></mark>
+
+    <% elsif product.stock.to_f = 0.0 %>
+    <mark><%= product.stock %></mark>
+    <mark><%= "out of stock" %></mark>
+
+    <% else  %>
+    <%= product.stock %>
+
+    <% end%>
   </p>
+
+
 
   <p> cost:
     <%= product.cost  %> 🥜
