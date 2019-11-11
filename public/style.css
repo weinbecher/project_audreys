@@ -1,3 +1,32 @@
 body {
   font-family: 'Crafty Girls', cursive;
 }
+
+hr{
+    border-top: 1px dashed black;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: hidden;
+  overflow: hidden;
+  background-color:#88ba88   ;
+
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #93c093;
+}
