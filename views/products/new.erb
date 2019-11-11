@@ -1,6 +1,6 @@
 <form class="add-product" action="/products" method="post">
   <label for="product-name">Product name: </label>
-  <input type="text" name="name" id="product-name">
+  <input type="text" name="name" id="product-name" required>
 
   <br/>
 
@@ -11,25 +11,25 @@
 
 
   <label for="product-stock"> Stock: </label>
-  <input type="text" name="stock" id="product-stock">
+  <input type="number" min="1" max="10" name="stock" id="product-stock" required>
 
   <br/>
 
 
   <label for="product-cost"> Cost: </label>
-  <input type="text" name="cost" id="product-cost">
+  <input type="number" min="1" name="cost" id="product-cost" required>
 
   <br/>
 
 
   <label for="product-price"> Price: </label>
-  <input type="text" name="price" id="product-price">
+  <input type="number" min="1" name="price" id="product-price" required>
 
   <br/>
 
 
   <label for="farm-select"> Select Farm: </label>
-    <select class="farm-select" name="farm_id">
+    <select class="farm-select" name="farm_id" required>
       <% @farms.each do |farm| %>
         <option value="<%= farm.id %>"><%= farm.name.split.map(&:capitalize).join(' ')%>
       <% end %>

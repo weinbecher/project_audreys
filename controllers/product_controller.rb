@@ -21,8 +21,13 @@ get '/products/:id' do
   erb (:"products/show")
 end
 
+get '/products/:id/edit' do
+  @farms = Farm.all()
+  @product = Product.find(params[:id])
+  erb (:"products/edit")
+end
 
-post '/products' do # create
+post '/products' do
   @product = Product.new( params )
   @product.save()
   erb( :"products/create" )
@@ -32,4 +37,10 @@ post '/products/:id/delete' do
   @product = Product.find(params[:id])
   @product.delete
   redirect to '/products'
+end
+
+post '/products/:id' do
+  product = Product.new(params)
+  product.update
+  redirect to "/products/#{params['id']}"
 end

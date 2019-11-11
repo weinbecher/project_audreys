@@ -38,6 +38,19 @@ class Product
 
 
 
+  def update()
+    sql = "UPDATE products SET (
+    name, description, stock, cost, price, farm_id
+    ) = (
+      $1, $2, $3, $4, $5, $6
+    )
+    WHERE id = $7"
+    values = [@name, @description, @stock, @cost, @price, @farm_id, @id]
+    SqlRunner.run(sql,values)
+  end
+
+
+
   def farm()
     farm = Farm.find(@farm_id)
     return farm

@@ -1,0 +1,56 @@
+<h2>Edit <%= @product.name  %></h2>
+
+<form class="edit-product" action="/products/<%=@product.id  %>" method="post">
+
+  <label for="product-name">Product name: </label>
+  <input type="text" name="name" id="product-name" value="<%=@product.name  %>">
+
+  <br/>
+
+  <label for="product-description"> Description: </label>
+  <input type="text" name="description" id="product-description" value=" <%=@product.description  %>">
+
+  <br/>
+
+
+  <label for="product-stock"> Stock: </label>
+  <input type="text" name="stock" id="product-stock" value="<%= @product.stock %>">
+
+  <br/>
+
+
+  <label for="product-cost"> Cost: </label>
+  <input type="text" name="cost" id="product-cost" value="<%= @product.cost %>">
+
+  <br/>
+
+
+  <label for="product-price"> Price: </label>
+  <input type="text" name="price" id="product-price" value="<%= @product.price %>">
+
+  <br/>
+
+
+  <label for="farm-select"> Select Farm: </label>
+    <select class="farm-select" name="farm_id" selected = "<%= @product.farm_id %>">
+      <% @farms.each do |farm| %>
+      <% if farm.id == @product.farm_id %>
+      <option value="<%= farm.id %> selected"> <%=farm.name.split.map(&:capitalize).join(' ') %>
+      <% else %>
+      <option value="<%=farm.id%>"><%=farm.name.split.map(&:capitalize).join(' ') %></option>
+      </option>
+      <% end %>
+    <% end %>
+    </select>
+
+
+  <br/>
+
+
+  <input type="submit" value="Update Product">
+
+  <form method="post" action="/products/<%= @product.id %>/delete">
+  <input type="submit" value="Delete Product"/>
+  </form>
+
+</form>
