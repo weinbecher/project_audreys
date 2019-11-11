@@ -30,10 +30,12 @@ class Farm
   end
 
 
-  def update
+  def update()
     sql = "UPDATE farms SET (
     name, address, phone_num
-      $1, $2, $3
+    ) =
+    (
+       $1, $2, $3
     )
     WHERE id = $4"
     values = [@name, @address, @phone_num, @id]
