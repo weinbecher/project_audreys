@@ -30,14 +30,14 @@ post '/farms' do
   @farm.save()
   erb( :"farms/create" )
 end
-#
-# post '/farms/:id/delete' do
-#   @farm = Farm.find(params[:id])
-#   @farm.delete()
-#   erb( :"farms/delete" )
-# end
-#
-#
+
+post '/farms/:id/delete' do
+  @farm = Farm.find(params[:id])
+  @farm.delete()
+  erb( :"farms/delete" )
+end
+
+
 post '/farms/:id' do
   farm = Farm.new(params)
   farm.update
