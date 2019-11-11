@@ -27,3 +27,9 @@ post '/products' do # create
   @product.save()
   erb( :"products/create" )
 end
+
+post '/products/:id/delete' do
+  @product = Product.find(params[:id])
+  @product.delete
+  redirect to '/products'
+end

@@ -43,8 +43,8 @@ class Product
     return farm
   end
 
-  def delete
-    sql = "DELETE FROM product WHERE id = $1"
+  def delete()
+    sql = "DELETE FROM products WHERE id = $1"
     values = [@id]
     SqlRunner.run(sql, values)
   end
