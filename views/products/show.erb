@@ -1,0 +1,16 @@
+<h1> <%= @product.name  %></h1>
+
+<p>Farm: <%= @product.farm.name %></p>
+<p>Cost: <%= @product.cost %> 🥜</p>
+<p>Price: <%= @product.price %> 🥜</p>
+<p>Stock: <%= @product.stock %></p>
+
+
+<form method="get" action="<%= @product.id %>/edit">
+<input type="submit" value="Edit Product"/>
+</form>
+
+
+<form method="post" action="/products/<%= @product.id %>/delete">
+<input type="submit" value="Delete Product"/>
+</form>

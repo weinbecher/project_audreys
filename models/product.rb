@@ -36,6 +36,13 @@ class Product
 
   end
 
+
+
+  def farm()
+    farm = Farm.find(@farm_id)
+    return farm
+  end
+
   def delete
     sql = "DELETE FROM product WHERE id = $1"
     values = [@id]
@@ -56,9 +63,10 @@ class Product
 
   def self.find(id)
     sql = "SELECT * From products WHERE id = $1"
-    values = [@id]
-    results = SqlRunner.run(sql, values)
-    return Product.new(results.first)
+    values = [id]
+    product = SqlRunner.run(sql, values)
+    result = Product.new(product.first)
+    return result
   end
 
 

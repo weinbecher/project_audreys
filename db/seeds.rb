@@ -37,8 +37,8 @@ product1 = Product.new({
   "name" => "strawberry",
   "description" => "strawberry_photo",
   "stock" => 12,
-  "cost" => 10,
-  "price" => 20,
+  "cost" => 1,
+  "price" => 2.5,
   "farm_id" => farm1.id
 
 })
@@ -49,8 +49,8 @@ product2 = Product.new({
   "name" => "blueberry",
   "description" => "blueberry_photo",
   "stock" => 30,
-  "cost" => 4,
-  "price" => 10,
+  "cost" => 0.25,
+  "price" => 0.5,
   "farm_id" => farm1.id
 
 })

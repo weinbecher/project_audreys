@@ -52,9 +52,10 @@ class Farm
 
   def self.find(id)
     sql = "SELECT * FROM farms WHERE id = $1"
-    values = [@id]
-    results = SqlRunner.run(sql, values)
-    return Farm.new(results.first)
+    values = [id]
+    farm = SqlRunner.run(sql, values)
+    result = Farm.new(farm.first)
+    return result
 
   end
 
