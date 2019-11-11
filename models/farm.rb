@@ -29,12 +29,30 @@ class Farm
     @id = farm_data.first()['id'].to_i
   end
 
+
+  def update
+    sql = "UPDATE farms SET (
+    name, address, phone_num
+      $1, $2, $3
+    )
+    WHERE id = $4"
+    values = [@name, @address, @phone_num, @id]
+    SqlRunner.run(sql,values)
+  end
+
+
   def delete
     sql = "DELETE FROM farms WHERE id = $1"
     values = [@id]
     SqlRunner.run(sql, values)
   end
 
+  def product()
+  sql = "SELECT products.*, farms.* FROM products INNER JOIN farms on products.farm_id= farms.id WHERE products.farm_id = $1 "
+  values = [@id]
+  results = SqlRunner.run(sql, values)
+  return results.map{ |product| Product.new(product) }
+  end
 
 
   def self.all

@@ -19,5 +19,5 @@ CREATE TABLE products
   stock INT4,
   cost FLOAT,
   price FLOAT,
-  Farm_id INT8 references farms(id)
+  farm_id INT8 references farms(id)
 );

@@ -1,0 +1,24 @@
+<h1> <%= @farm.name  %></h1>
+
+<p>Product:
+
+  <% @farm.product.each do |product| %>
+  <%= product.name %>  </br>
+  <%= product.description %> </br>
+  <hr>
+  <% end %>
+
+</p>
+
+<p>Address: <%= @farm.address %> 🥜</p>
+<p>Phone Number: <%= @farm.phone_num %> 🥜</p>
+
+
+
+<form method="get" action="<%= @farm.id %>/edit">
+<input type="submit" value="Edit Farm"/>
+
+
+<form method="post" action="/farms/<%= @farm.id %>/delete">
+<input type="submit" value="Delete Farm"/>
+</form>

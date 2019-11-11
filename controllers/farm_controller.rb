@@ -14,11 +14,11 @@ end
 #   @farms = Farm.all()
 #   erb (:"farms/new")
 # end
-#
-# get '/farms/:id' do
-#   @farm = Farm.find(params[:id])
-#   erb (:"farms/show")
-# end
+
+get '/farms/:id' do
+  @farm = Farm.find(params[:id])
+  erb (:"farms/show")
+end
 #
 # get '/farms/:id/edit' do
 #   @farm = Find.find(params[:id])
