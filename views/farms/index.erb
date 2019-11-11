@@ -1,0 +1,25 @@
+<h1>All Farms</h1>
+
+<p><a href="/farms/new">Add new farm </a></p>
+
+<% @farms.each do |farm| %>
+  <h2>
+      <a href="/farms/<%= farm.id %>">
+        <%= farm.name  %>
+      </a>
+  </h2>
+
+  <p> address:
+    <%= farm.address  %>
+  </p>
+
+  <p> phone number:
+    <%= farm.phone_num  %>
+  </p>
+
+  <p>
+    <a href="/farms/<%= farm.id %>/edit">Edit Farm</a>
+  </p>
+
+  <hr>
+<% end %>
