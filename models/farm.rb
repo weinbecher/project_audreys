@@ -50,7 +50,7 @@ class Farm
   end
 
   def product()
-  sql = "SELECT products.*, farms.* FROM products INNER JOIN farms on products.farm_id= farms.id WHERE products.farm_id = $1 "
+  sql = "SELECT * FROM products WHERE farm_id = $1 "
   values = [@id]
   results = SqlRunner.run(sql, values)
   return results.map{ |product| Product.new(product) }

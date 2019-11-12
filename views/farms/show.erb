@@ -1,17 +1,19 @@
-<h1> <%= @farm.name  %></h1>
-
-<p>Product:
-
-  <% @farm.product.each do |product| %>
-  <%= product.name %>  </br>
-  <%= product.description %> </br>
-  <hr>
-  <% end %>
-
-</p>
+<h1> <%= @farm.name %> </h1>
 
 <p>Address: <%= @farm.address %> </p>
 <p>Phone Number: <%= @farm.phone_num %> </p>
+
+<br/>
+
+<p>
+  <% @farm.product.each do |product| %>
+  Product: <a href="../products/<%=product.id%>"><%= product.name %>  </a></br>
+  <%= product.description %> </br>
+  <hr>
+  <% end %>
+</p>
+
+
 
 
 

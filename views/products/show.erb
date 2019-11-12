@@ -1,6 +1,8 @@
 <h1> <%= @product.name  %></h1>
 
-<p>Farm: <%= @product.farm.name %></p>
+<p>Farm: <a href = "/farms/<%=@product.farm.id%>"><%= @product.farm.name %></a></p>
+
+<p>Description:<%= @product.description %></p>
 <p>Cost: <%= @product.cost %> 🥜</p>
 <p>Price: <%= @product.price %> 🥜</p>
 <p>Stock:
