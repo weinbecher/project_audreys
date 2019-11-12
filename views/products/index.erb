@@ -38,4 +38,53 @@
   </p>
 
   <hr>
+
 <% end %>
+
+<h2> Expensive stuff </h2>
+<% @products_price_above_10 .each do |product| %>
+  <p>
+      <a href="/products/<%= product.id %>">
+        <%= product.name  %>
+      </a>
+  </p>
+  <p> price:
+    <%= product.price  %> 🥜
+  </p>
+<% end %>
+
+<br/>
+
+<h2> Stuff need to be on sale </h2>
+<% @products_stock_above_10 .each do |product| %>
+  <p>
+      <a href="/products/<%= product.id %>">
+        <%= product.name  %>
+      </a>
+  </p>
+  <p> stock:
+      <%= product.stock %> 
+  </p>
+<% end %>
+<br/>
+
+
+<h2> Stuff need to import </h2>
+<% @products_stock_below_2 .each do |product| %>
+  <p>
+      <a href="/products/<%= product.id %>">
+        <%= product.name  %>
+      </a>
+  </p>
+  <p>stock:
+    <% if product.stock > 2.0 %>
+      <%= product.stock %>
+    <% elsif product.stock == 0.0 %>
+      <span style="background-color: red"><%= "out of stock" %></span>  😱
+    <% else  %>
+      <span style="background-color: orange">  <%= product.stock %> <%= "low stock" %></span> 😟
+    <% end%>
+  </p>
+
+<% end %>
+<br/>

@@ -8,6 +8,13 @@ also_reload('../models/*')
 
 get '/products' do
   @products = Product.all()
+
+  @products_price_above_10 = Product.price_above_10
+
+  @products_stock_below_2 = Product.stock_below_2
+
+  @products_stock_above_10 = Product.stock_above_10
+
   erb (:"products/index")
 end
 

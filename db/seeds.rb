@@ -57,5 +57,64 @@ product2 = Product.new({
 
 product2.save
 
+
+
+product3 = Product.new({
+  "name" => "watermelon",
+  "description" => "watermelon_photo",
+  "stock" => 0.2,
+  "cost" => 300,
+  "price" => 600,
+  "farm_id" => farm3.id
+
+})
+
+product3.save
+
+
+
+
+product4 = Product.new({
+  "name" => "apple",
+  "description" => "apple_photo",
+  "stock" => 0.5,
+  "cost" => 50,
+  "price" => 100,
+  "farm_id" => farm3.id
+
+})
+
+product4.save
+
+
+product5 = Product.new({
+  "name" => "banana",
+  "description" => "apple_photo",
+  "stock" => 0,
+  "cost" => 200,
+  "price" => 400,
+  "farm_id" => farm3.id
+
+})
+
+product5.save
+
+
+
+
+product6 = Product.new({
+  "name" => "lettece",
+  "description" => "lettece_photo",
+  "stock" => 0.5,
+  "cost" => 50,
+  "price" => 100,
+  "farm_id" => farm3.id
+
+})
+
+product6.save
+
+
+
 binding.pry
 return nil

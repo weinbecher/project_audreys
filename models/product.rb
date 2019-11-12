@@ -110,6 +110,7 @@ class Product
       end
     end
     return results
+    # always return results outside the loop unless you want to find something
   end
 
 
