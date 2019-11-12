@@ -35,7 +35,7 @@ farm3.save
 
 product1 = Product.new({
   "name" => "strawberry",
-  "description" => "strawberry_photo",
+  "description" => "/strawberry.png",
   "stock" => 12.0,
   "cost" => 1.0,
   "price" => 2.5,
@@ -47,7 +47,7 @@ product1.save
 
 product2 = Product.new({
   "name" => "blueberry",
-  "description" => "blueberry_photo",
+  "description" => "/blueberry.png",
   "stock" => 30.0,
   "cost" => 0.25,
   "price" => 0.5,
@@ -61,7 +61,7 @@ product2.save
 
 product3 = Product.new({
   "name" => "watermelon",
-  "description" => "watermelon_photo",
+  "description" => "/watermelon.png",
   "stock" => 0.2,
   "cost" => 300,
   "price" => 600,
@@ -76,7 +76,7 @@ product3.save
 
 product4 = Product.new({
   "name" => "apple",
-  "description" => "apple_photo",
+  "description" => "/apple.png",
   "stock" => 0.5,
   "cost" => 50,
   "price" => 100,
@@ -89,7 +89,7 @@ product4.save
 
 product5 = Product.new({
   "name" => "banana",
-  "description" => "apple_photo",
+  "description" => "/banana.png",
   "stock" => 0,
   "cost" => 200,
   "price" => 400,
@@ -103,8 +103,8 @@ product5.save
 
 
 product6 = Product.new({
-  "name" => "lettece",
-  "description" => "lettece_photo",
+  "name" => "lettuce",
+  "description" => "/lettuce.png",
   "stock" => 0.5,
   "cost" => 50,
   "price" => 100,
