@@ -41,7 +41,7 @@ class Product
     @markup = @price - @cost
     return @markup
   end
-  
+
   def update()
     sql = "UPDATE products SET (
     name, description, stock, cost, price, farm_id
@@ -85,6 +85,46 @@ class Product
     result = Product.new(product.first)
     return result
   end
+
+
+
+
+  def self.price_above_10
+    products = Product.all
+    results = []
+    for product in products
+      if product.price.to_f > 10.0
+         results.push(product)
+      end
+    end
+    return results
+  end
+
+
+  def self.stock_below_2
+    products = Product.all
+    results = []
+    for product in products
+      if product.stock.to_f < 2.0
+      results.push(product)
+      end
+    end
+    return results
+  end
+
+
+  def self.stock_above_10
+    products = Product.all
+    results = []
+    for product in products
+      if product.stock.to_f > 10.0
+      results.push(product)
+      end
+    end
+    return results
+  end
+
+
 
 
 
