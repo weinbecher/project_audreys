@@ -1,7 +1,7 @@
 table.listTable {
   border: 2px solid #88BA88;
   background-color: #E7F1E7;
-  width: 100%;
+  width: 70%;
   text-align: center;
   border-spacing: 0px !important;
 
@@ -16,4 +16,29 @@ table.listTable tbody td {
 table.listTable th {
   background: linear-gradient(to bottom, #e7f1e7 0%, #93c09363 40%, #93c093a3 100%);
   font-weight: 200;
+  font-size: 15px;
+
+}
+
+
+table.listTable-2 {
+  border: 2px solid #88BA88;
+  background-color: #E7F1E7;
+  width: 40%;
+  text-align: center;
+  border-spacing: 0px !important;
+
+}
+table.listTable-2 td, table.listTable-2 th {
+  border: 1px solid #7AA77A;
+  padding: 4px 4px;
+}
+table.listTable-2 tbody td {
+  font-size: 13px;
+}
+table.listTable-2 th {
+  background: linear-gradient(to bottom, #e7f1e7 0%, #93c09363 40%, #93c093a3 100%);
+  font-weight: 200;
+  font-size: 15px;
+
 }

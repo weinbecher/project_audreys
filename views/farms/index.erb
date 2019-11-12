@@ -1,25 +1,36 @@
-<h1>All Farms</h1>
+<h3>All Farms</h3>
 
 <p><a href="/farms/new">Add new farm </a></p>
 
+<table class="listTable">
+<tr>
+    <th>Name</th>
+    <th>Address</th>
+    <th>Phone number</th>
+    <th>Edit Farm</th>
+
+
+</tr>
+<tr>
+
 <% @farms.each do |farm| %>
-  <h2>
-      <a href="/farms/<%= farm.id %>">
+  <td>
+        <a href="/farms/<%= farm.id %>">
         <%= farm.name  %>
       </a>
-  </h2>
-
-  <p> address:
+  </td>
+  <td>
     <%= farm.address  %>
-  </p>
+  </td>
 
-  <p> phone number:
+  <td>
     <%= farm.phone_num  %>
-  </p>
+  </td>
 
-  <p>
-    <a href="/farms/<%= farm.id %>/edit">Edit Farm</a>
-  </p>
+  <td>
+    <a href="/farms/<%= farm.id %>/edit">Edit</a>
+  </td>
+</tr>
 
-  <hr>
 <% end %>
+</<table>

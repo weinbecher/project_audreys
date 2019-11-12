@@ -1,17 +1,12 @@
-<h1>All Products</h1>
-
-<p><a href="/products/new">Add new product </a></p>
-
-
+<h3>Inventory<h3>
 <table class="listTable">
-
 <tr>
-  <th>Name</th>
-  <th>Stock</th>
-  <th>Cost</th>
-  <th>Price</th>
-  <th>Markup</th>
-  <th>Edit Product</th>
+  <th>name</th>
+  <th>stock</th>
+  <th>cost</th>
+  <th>price</th>
+  <th>markup</th>
+  <th>edit product</th>
 
 </tr>
 
@@ -49,7 +44,7 @@
   </td>
 
   <td>
-    <a href="/products/<%= product.id %>/edit">Edit Product</a>
+    <a href="/products/<%= product.id %>/edit">edit </a>
   </td>
 
 
@@ -58,44 +53,73 @@
 </table>
 
 
-<h2> Expensive stuff </h2>
-<!-- <table class="listTable"> -->
+<h3> some expensive stuff </h3>
+
+<table class="listTable-2">
+  <tr>
+      <th>Name</th>
+      <th>Price</th>
+  </tr>
+
+  <tr>
+
 <% @products_price_above_10 .each do |product| %>
-  <p>
-      <a href="/products/<%= product.id %>">
-        <%= product.name  %>
+  <td>
+      <a href="/products/<%= product.id %>">  <%= product.name  %>
       </a>
-  </p>
-  <p> price:
+  </td>
+  <td>
     <%= product.price  %> 🥜
-  </p>
+  </td>
+  </tr>
 <% end %>
-<!-- </table> -->
+</table>
 
 <br/>
 
-<h2> Stuff need to be on sale </h2>
+<h3> Stuff need to be on sale </h3>
+
+<table class="listTable-2">
+  <tr>
+      <th>Name</th>
+      <th>Stock</th>
+  </tr>
+
+  <tr>
+
+
 <% @products_stock_above_10 .each do |product| %>
-  <p>
+
+  <td>
       <a href="/products/<%= product.id %>">
         <%= product.name  %>
       </a>
-  </p>
-  <p> stock:
+  </td>
+
+  <td>
+      stock:
       <%= product.stock %>
-  </p>
+  </td>
+  <tr>
 <% end %>
-<br/>
+</table>
 
 
-<h2> Stuff need to import </h2>
+
+<h3> Stuff need to import </h3>
+<table class="listTable-2">
+  <tr>
+      <th>Name</th>
+      <th>Stock</th>
+  </tr>
+  <tr>
 <% @products_stock_below_2 .each do |product| %>
-  <p>
-      <a href="/products/<%= product.id %>">
+  <td>
+    <a href="/products/<%= product.id %>">
         <%= product.name  %>
       </a>
-  </p>
-  <p>stock:
+  </td>
+  <td>
     <% if product.stock > 2.0 %>
       <%= product.stock %>
     <% elsif product.stock == 0.0 %>
@@ -103,7 +127,14 @@
     <% else  %>
       <span style="background-color: orange">  <%= product.stock %> <%= "low stock" %></span> 😟
     <% end%>
-  </p>
+  </td>
+  </tr>
+
 
 <% end %>
+</table>
+
+<p><a href="/products/new"> ➕ </a></p>
+
+
 <br/>

@@ -1,6 +1,7 @@
-h1,h2,h3 {
+h1 {
   font-family: 'Crafty Girls', cursive;
 }
+
 
 body {
   font-family: 'Lato', sans-serif;
@@ -13,30 +14,38 @@ hr{
     border-top: 1px dashed black;
 }
 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: hidden;
-  overflow: hidden;
-  background-color:#88ba88   ;
 
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #88ba88;
+  overflow-x: hidden;
 }
 
-li {
-  float: left;
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 16px;
-  text-decoration: none;
-}
-
-li a:hover {
+.sidenav a:hover {
   background-color: #93c093;
 }
+
+.sidenav ul {
+  list-style-type: none;
+}
+
+
+.sidenav a {
+  color: white;
+  padding: 16px;
+  text-decoration: none;
+  display: block;
+}
+
+# shop-title {
+  padding-left: 16px;
+}
+
 
 # low-stock {
   background-color: orange;
@@ -45,7 +54,10 @@ li a:hover {
   background-color: red;
 }
 
-.container { padding: 50px;
+.container {
+  padding: 50px;
+  margin-left: 200px;
+  padding-left: 20px;
 
 }
 .submit-button {
