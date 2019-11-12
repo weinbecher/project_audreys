@@ -1,5 +1,11 @@
-body {
+h1,h2,h3 {
   font-family: 'Crafty Girls', cursive;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+
+
 }
 
 hr{
@@ -36,4 +42,9 @@ li a:hover {
 }
 # out-of-stock {
   background-color: red;
+}
+
+
+.submit-button {
+  display: flex;
 }

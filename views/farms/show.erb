@@ -5,18 +5,17 @@
 
 <br/>
 
+
+
 <p>
+  <% results = [] %>
   <% @farm.product.each do |product| %>
-  Product: <a href="../products/<%=product.id%>"><%= product.name %>  </a></br>
-  <%= product.description %> </br>
-  <hr>
+   <a href = "/products/<%=product.id%>"><img src = "<%= product.description%>" alt="<%= product.name %>" height="auto" width="100px"></a>
   <% end %>
 </p>
 
 
-
-
-
+<div class="submit-button">
 <form method="get" action="<%= @farm.id %>/edit">
 <input type="submit" value="Edit Farm"/>
 </form>
@@ -24,3 +23,4 @@
 <form method="post" action="/farms/<%= @farm.id %>/delete">
 <input type="submit" value="Delete Farm">
 </form>
+<div>
