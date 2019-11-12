@@ -10,21 +10,15 @@
   </h2>
 
 
-  <p>Stock:
-    <% if product.stock.to_f < 2.0 %>
-    <mark><%= product.stock %></mark>
-    <mark><%= "low stock" %></mark>
-
-    <% elsif product.stock.to_f = 0.0 %>
-    <mark><%= product.stock %></mark>
-    <mark><%= "out of stock" %></mark>
-
+  <p>stock:
+    <% if product.stock > 2.0 %>
+      <%= product.stock %>
+    <% elsif product.stock == 0.0 %>
+      <span style="background-color: red"><%= "out of stock" %></span>  😱
     <% else  %>
-    <%= product.stock %>
-
+      <span style="background-color: orange">  <%= product.stock %> <%= "low stock" %></span> 😟
     <% end%>
   </p>
-
 
 
   <p> cost:

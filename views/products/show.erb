@@ -4,12 +4,12 @@
 <p>Cost: <%= @product.cost %> 🥜</p>
 <p>Price: <%= @product.price %> 🥜</p>
 <p>Stock:
-  <% if @product.stock.to_i > 2 %>
-  <%= @product.stock %>
-  <% elsif @product.stock = 0 %>
-  <mark><%= "out of stock" %></mark>
+  <% if @product.stock > 2.0 %>
+    <%= @product.stock %>
+  <% elsif @product.stock == 0.0 %>
+    <span style="background-color: red"><%= "out of stock" %></span>  😱
   <% else  %>
-  <mark><%= "low stock" %></mark>
+    <span style="background-color: orange">  <%= @product.stock %> <%= "low stock" %></span> 😟
   <% end%>
 </p>
 

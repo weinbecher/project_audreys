@@ -36,8 +36,8 @@ farm3.save
 product1 = Product.new({
   "name" => "strawberry",
   "description" => "strawberry_photo",
-  "stock" => 12,
-  "cost" => 1,
+  "stock" => 12.0,
+  "cost" => 1.0,
   "price" => 2.5,
   "farm_id" => farm1.id
 
@@ -48,7 +48,7 @@ product1.save
 product2 = Product.new({
   "name" => "blueberry",
   "description" => "blueberry_photo",
-  "stock" => 30,
+  "stock" => 30.0,
   "cost" => 0.25,
   "price" => 0.5,
   "farm_id" => farm1.id

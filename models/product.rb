@@ -9,7 +9,7 @@ class Product
     @id = options['id'].to_i
     @name = options['name']
     @description = options ['description']
-    @stock = options['stock']
+    @stock = options['stock'].to_f
     @cost = options['cost'].to_f
     @price = options['price'].to_f
     @farm_id = options['farm_id'].to_i

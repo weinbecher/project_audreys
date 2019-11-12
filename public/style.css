@@ -30,3 +30,10 @@ li a {
 li a:hover {
   background-color: #93c093;
 }
+
+# low-stock {
+  background-color: orange;
+}
+# out-of-stock {
+  background-color: red;
+}
