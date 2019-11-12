@@ -8,7 +8,7 @@
   <br/>
 
   <label for="product-description"> Photo: </label>
-  <input type="url" name="description" id="product-description" value =" <%=@product.description %>" > <small> * url only</small>
+  <input type="text" name="description" id="product-description" value =" <%=@product.description %>" > <small> * url only</small>
   <br/>
 
 
@@ -54,7 +54,7 @@
   <form method="post" action="/products/<%=@product.id %>/delete">
 
 
-  <input onclick="deleteComfirm()" type="submit" value="Delete Product"/>
+  <input onclick="deleteComfirm()" type="submit" value="Delete Product">
 
   <script>
 

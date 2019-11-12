@@ -1,0 +1,19 @@
+table.listTable {
+  border: 2px solid #88BA88;
+  background-color: #E7F1E7;
+  width: 100%;
+  text-align: center;
+  border-spacing: 0px !important;
+
+}
+table.listTable td, table.listTable th {
+  border: 1px solid #7AA77A;
+  padding: 4px 4px;
+}
+table.listTable tbody td {
+  font-size: 13px;
+}
+table.listTable th {
+  background: linear-gradient(to bottom, #e7f1e7 0%, #93c09363 40%, #93c093a3 100%);
+  font-weight: 200;
+}

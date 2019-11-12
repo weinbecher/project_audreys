@@ -2,46 +2,64 @@
 
 <p><a href="/products/new">Add new product </a></p>
 
+
+<table class="listTable">
+
+<tr>
+  <th>Name</th>
+  <th>Stock</th>
+  <th>Cost</th>
+  <th>Price</th>
+  <th>Markup</th>
+  <th>Edit Product</th>
+
+</tr>
+
 <% @products.each do |product| %>
-  <h2>
-      <a href="/products/<%= product.id %>">
+
+<tr>
+    <td>
+       <a href="/products/<%= product.id %>">
         <%= product.name  %>
       </a>
-  </h2>
 
+    </td>
 
-  <p>stock:
-    <% if product.stock > 2.0 %>
+    <td>
+      <% if product.stock > 2.0 %>
       <%= product.stock %>
     <% elsif product.stock == 0.0 %>
       <span style="background-color: red"><%= "out of stock" %></span>  😱
     <% else  %>
       <span style="background-color: orange">  <%= product.stock %> <%= "low stock" %></span> 😟
     <% end%>
+    </td>
   </p>
 
-
-  <p> cost:
+  <td>
     <%= product.cost  %> 🥜
-  </p>
+  </td>
 
-  <p> price:
+  <td>
     <%= product.price  %> 🥜
-  </p>
+  </td>
 
-  <p> Markup:
+  <td>
     <%= product.markup %> 🥜
-  </p>
+  </td>
 
-  <p>
+  <td>
     <a href="/products/<%= product.id %>/edit">Edit Product</a>
-  </p>
+  </td>
 
-  <hr>
 
+</tr>
 <% end %>
+</table>
+
 
 <h2> Expensive stuff </h2>
+<!-- <table class="listTable"> -->
 <% @products_price_above_10 .each do |product| %>
   <p>
       <a href="/products/<%= product.id %>">
@@ -52,6 +70,7 @@
     <%= product.price  %> 🥜
   </p>
 <% end %>
+<!-- </table> -->
 
 <br/>
 

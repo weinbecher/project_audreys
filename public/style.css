@@ -4,8 +4,9 @@ h1,h2,h3 {
 
 body {
   font-family: 'Lato', sans-serif;
-
-
+  color: #3D533D;
+  background-color: #e5efe5;
+  background-image: url("https://www.transparenttextures.com/patterns/white-tiles.png");
 }
 
 hr{
@@ -44,7 +45,9 @@ li a:hover {
   background-color: red;
 }
 
+.container { padding: 50px;
 
+}
 .submit-button {
   display: flex;
 }
