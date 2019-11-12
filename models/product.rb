@@ -37,7 +37,11 @@ class Product
   end
 
 
-
+  def markup()
+    @markup = @price - @cost
+    return @markup
+  end
+  
   def update()
     sql = "UPDATE products SET (
     name, description, stock, cost, price, farm_id
