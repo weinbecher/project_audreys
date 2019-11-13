@@ -5,8 +5,8 @@ h1 {
 
 body {
   font-family: 'Lato', sans-serif;
-  color: #3D533D;
-  background-color: #e5efe5;
+  color: #454851;
+  background-color: #e9fae3;
   background-image: url("https://www.transparenttextures.com/patterns/white-tiles.png");
 }
 
@@ -17,45 +17,58 @@ hr{
 
 .sidenav {
   height: 100%;
-  width: 200px;
+  width: 180px;
   position: fixed;
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #88ba88;
+  background-color: #fceff9;
   overflow-x: hidden;
+  box-shadow: 10px 10px 5px #b0a7ae;
+  border-radius: 0px 10px 10px 0px;
+
 }
 
 .sidenav a:hover {
-  background-color: #93c093;
+  background-color: #e2d7e0;
 }
 
 .sidenav ul {
-  list-style-type: none;
+    list-style-type: none;
+    margin-left: -30px;
 }
 
 
 .sidenav a {
-  color: white;
+  color: #958b83
+;
   padding: 16px;
   text-decoration: none;
   display: block;
 }
 
+
+
+a, a:link, a:visited {
+  color: #454851;
+  text-decoration: none;
+}
+
+a:hover, a:active, a:focus {
+  color: #fceff9 ;
+}
+
+
+
 # shop-title {
   padding-left: 16px;
+  color: white;
+
 }
 
-
-# low-stock {
-  background-color: orange;
-}
-# out-of-stock {
-  background-color: red;
-}
 
 .container {
-  padding: 50px;
+  /* padding: 50px; */
   margin-left: 200px;
   padding-left: 20px;
 

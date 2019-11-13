@@ -1,4 +1,4 @@
-<h3>Inventory<h3>
+<h3>stuff I've got<h3>
 <table class="listTable">
 <tr>
   <th>name</th>
@@ -24,9 +24,9 @@
       <% if product.stock > 2.0 %>
       <%= product.stock %>
     <% elsif product.stock == 0.0 %>
-      <span style="background-color: red"><%= "out of stock" %></span>  😱
+      <span style="color: red"><%= "out of stock" %></span>  😱
     <% else  %>
-      <span style="background-color: orange">  <%= product.stock %> <%= "low stock" %></span> 😟
+      <span style="color: orange">  <%= product.stock %> <%= "low stock" %></span> 😟
     <% end%>
     </td>
   </p>
@@ -53,7 +53,7 @@
 </table>
 
 
-<h3> some expensive stuff </h3>
+<h3> the shiney expensive stuff </h3>
 
 <table class="listTable-2">
   <tr>
@@ -77,7 +77,7 @@
 
 <br/>
 
-<h3> Stuff need to be on sale </h3>
+<h3> stuff that needs to be on sale </h3>
 
 <table class="listTable-2">
   <tr>
@@ -106,7 +106,7 @@
 
 
 
-<h3> Stuff need to import </h3>
+<h3> stuff that I need to import </h3>
 <table class="listTable-2">
   <tr>
       <th>Name</th>
@@ -123,9 +123,9 @@
     <% if product.stock > 2.0 %>
       <%= product.stock %>
     <% elsif product.stock == 0.0 %>
-      <span style="background-color: red"><%= "out of stock" %></span>  😱
+      <span style="color: red"><%= "out of stock" %></span>  😱
     <% else  %>
-      <span style="background-color: orange">  <%= product.stock %> <%= "low stock" %></span> 😟
+      <span style="color: orange">  <%= product.stock %> <%= "low stock" %></span> 😟
     <% end%>
   </td>
   </tr>
