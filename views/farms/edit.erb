@@ -1,3 +1,5 @@
+<h2>Edit <%= @farm.name  %> ✨</h2>
+
 <form class="add-farm" action="/farms/<%=@farm.id%>" method="post">
   <label for="farm-name"> Farm name: </label>
   <input type="text" name="name" id="farm-name" value="<%= @farm.name%>" required>

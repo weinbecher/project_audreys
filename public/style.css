@@ -43,17 +43,19 @@ hr{
 
 
 .sidenav a {
-  color: #958b83
-;
+  color: #958b83 !important;
   padding: 16px;
   text-decoration: none;
   display: block;
+  font-weight: 800;
+
 }
 
 
 
 a, a:link, a:visited {
-  color: #454851;
+  color: #6c895f;
+;
   text-decoration: none;
 }
 
@@ -78,4 +80,14 @@ a:hover, a:active, a:focus {
 }
 .submit-button {
   display: flex;
+}
+
+
+#hamster{
+  height: auto;
+  width: 20%;
+  left: 60%;
+  display: inline-block;
+  position:absolute;
+  top:-1%;
 }
