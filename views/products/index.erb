@@ -54,61 +54,7 @@
 
 
 
-<br/>
-<table class="listTable-2"><a id= "#sale"></a>
-  <tr>
 
-      <th colspan="2">stuff that needs to be on sale</th>
-
-  </tr>
-
-  <tr>
-
-
-<% @products_stock_above_10 .each do |product| %>
-
-  <td>
-      <a href="/products/<%= product.id %>">
-        <%= product.name  %>
-      </a>
-  </td>
-
-  <td>
-      stock:
-      <%= product.stock %>
-  </td>
-  <tr>
-<% end %>
-</table>
-
-
-<br/>
-
-<table class="listTable-2"><a id= "#import"></a>
-  <tr>
-      <th colspan="2"> stuff that I need to import </th>
-  </tr>
-  <tr>
-<% @products_stock_below_2 .each do |product| %>
-  <td>
-    <a href="/products/<%= product.id %>">
-        <%= product.name  %>
-      </a>
-  </td>
-  <td>
-    <% if product.stock > 2.0 %>
-      <%= product.stock %>
-    <% elsif product.stock == 0.0 %>
-      <span style="color: red"><%= "out of stock" %></span>  😱
-    <% else  %>
-      <span style="color: orange">  <%= product.stock %> <%= "low stock" %></span> 😟
-    <% end%>
-  </td>
-  </tr>
-
-
-<% end %>
-</table>
 
 
 

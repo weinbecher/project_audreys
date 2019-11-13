@@ -5,5 +5,7 @@ require_relative ('controllers/farm_controller')
 
 
 get '/' do
-  redirect to "/products"
+  @products = Product.all()
+  @farms = Farm.all()
+  erb (:index)
 end

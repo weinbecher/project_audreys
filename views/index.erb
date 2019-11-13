@@ -1,1 +1,93 @@
 <h1>Audrey's</h1>
+
+<h3>all products <a href="/products/new"> ➕ </a> <h3>
+<table class="listTable">
+<tr>
+  <th>name</th>
+  <th>stock</th>
+  <th>cost</th>
+  <th>price</th>
+  <th>markup</th>
+  <th>edit product</th>
+
+</tr>
+
+<% @products.each do |product| %>
+
+<tr>
+    <td>
+       <a href="/products/<%= product.id %>">
+        <%= product.name  %>
+      </a>
+
+    </td>
+
+    <td>
+      <% if product.stock > 2.0 %>
+      <%= product.stock %>
+    <% elsif product.stock == 0.0 %>
+      <span style="color: red"><%= "out of stock" %></span>  😱
+    <% else  %>
+      <span style="color: orange">  <%= product.stock %> <%= "low stock" %></span> 😟
+    <% end%>
+    </td>
+  </p>
+
+  <td>
+    <%= product.cost  %> 🥜
+  </td>
+
+  <td>
+    <%= product.price  %> 🥜
+  </td>
+
+  <td>
+    <%= product.markup %> 🥜
+  </td>
+
+  <td>
+    <a href="/products/<%= product.id %>/edit">edit </a>
+  </td>
+
+
+</tr>
+<% end %>
+</table>
+
+<br/>
+
+
+<h3>All farms <a href="/farms/new">➕ </a></h3>
+
+<table class="listTable">
+<tr>
+    <th>Name</th>
+    <th>Address</th>
+    <th>Phone number</th>
+    <th>Edit Farm</th>
+
+
+</tr>
+<tr>
+
+<% @farms.each do |farm| %>
+  <td>
+        <a href="/farms/<%= farm.id %>">
+        <%= farm.name  %>
+      </a>
+  </td>
+  <td>
+    <%= farm.address  %>
+  </td>
+
+  <td>
+    <%= farm.phone_num  %>
+  </td>
+
+  <td>
+    <a href="/farms/<%= farm.id %>/edit">Edit</a>
+  </td>
+</tr>
+
+<% end %>
+</<table>

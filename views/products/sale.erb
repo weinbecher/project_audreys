@@ -1,0 +1,26 @@
+
+<table class="listTable-2">
+  <tr>
+
+      <th colspan="2">stuff that needs to be on sale</th>
+
+  </tr>
+
+  <tr>
+
+
+<% @products_stock_above_10 .each do |product| %>
+
+  <td>
+      <a href="/products/<%= product.id %>">
+        <%= product.name  %>
+      </a>
+  </td>
+
+  <td>
+      stock:
+      <%= product.stock %>
+  </td>
+  <tr>
+<% end %>
+</table>

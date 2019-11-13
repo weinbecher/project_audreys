@@ -6,7 +6,6 @@ table.listTable {
   width: 70%;
   text-align: center;
   border-spacing: 0px !important;
-  /* border-radius: 10px 10px 10px 10px; */
 
 }
 table.listTable td, table.listTable th {
