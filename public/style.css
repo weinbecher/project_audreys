@@ -1,5 +1,7 @@
 h1 {
   font-family: 'Crafty Girls', cursive;
+  color: #454851 !important;
+  font-weight: lighter;
 }
 
 
@@ -80,6 +82,10 @@ a:hover, a:active, a:focus {
 }
 .submit-button {
   display: flex;
+}
+
+#shop-title{
+  font-weight: bold!important;
 }
 
 
