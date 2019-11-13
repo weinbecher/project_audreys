@@ -1,18 +1,19 @@
-.form{
-   background-color:#FEFDFE;
-   border:solid 1px #7F7770;
-   font-size:13px;
-   color:#454851;
-   -moz-border-radius:15px;
-   -webkit-border-radius:15px;
-   border-radius:15px;
-   padding-top:10px;
-   padding-bottom:10px;
-   padding-left:10px;
-   padding-right:10px;
-   width: 40%;
-   margin-top: 50px;
 
+.form {
+    background-color: #FEFDFE;
+    border: solid 1px #7F7770;
+    font-size: 13px;
+    color: #454851;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 69%;
+    margin-top: 50px;
+    position: relative;
 }
 
 
@@ -72,9 +73,9 @@
   left: 50%;
   }
 
-.submit-button a:hover{
-  /* background-color: #958b83; */
-}
+
+
+
  #submit {
    background: linear-gradient(to bottom,#eee8e4 0%, #eae3dd 40%, #e5ddd6 100%);
    font-weight: 200;
@@ -83,7 +84,10 @@
    position: sticky;
    top: 10px;
    margin: 10px;
-   left: 50%;
+   display: inline-block;
+   display: flex;
+
+
 }
 
   #delete {
@@ -97,3 +101,23 @@
     display: inline-block;
     border:solid 1px #A9A9A9;
   }
+
+  form.deleteButton {
+    bottom: 10px;
+    position: absolute;
+    left: 150px;
+}
+table.listTable.hamster {
+    position: relative;
+}
+
+table.listTable.hamster:after {
+    content: "";
+    position: absolute;
+    width: 170px;
+    height: 170px;
+    background: url(hamster.gif);
+    top: -138px;
+    background-size: contain;
+    right: 0;
+}

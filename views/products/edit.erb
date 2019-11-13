@@ -47,12 +47,12 @@
   <br/>
 
 
-  <input type="submit" value="Update Product" id="submit">
+  <input type="submit" value="Update Product" id="submit" >
 
   </form>
 
 
-  <form method="post" action="/products/<%=@product.id %>/delete">
+  <form method="post" action="/products/<%=@product.id %>/delete" class="deleteButton">
 
 
   <input onclick="deleteComfirm()" type="submit" id="delete" value="Delete Product">
