@@ -7,7 +7,7 @@ body {
   font-family: 'Lato', sans-serif;
   color: #454851;
   background-color: #e9fae3;
-  background-image: url("https://www.transparenttextures.com/patterns/white-tiles.png");
+  background-image: url("https://scontent-lht6-1.xx.fbcdn.net/v/t1.15752-9/75348999_2531207027203030_759000289767325696_n.png?_nc_cat=109&_nc_oc=AQk1rpJ0gKYhuJEH0BdT7PDB2DDWDDaINmVqly1vCrZZM9dbYXQw834a40H57Us8hk5_ghSCJrtQrkonpsOV7FWX&_nc_ht=scontent-lht6-1.xx&oh=d3f91e4bfacf46447f415c972041ac02&oe=5E4313C1");
 }
 
 hr{
@@ -17,7 +17,7 @@ hr{
 
 .sidenav {
   height: 100%;
-  width: 180px;
+  width: 230px;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -26,6 +26,8 @@ hr{
   overflow-x: hidden;
   box-shadow: 10px 10px 5px #b0a7ae;
   border-radius: 0px 10px 10px 0px;
+  background-image: url("https://www.transparenttextures.com/patterns/white-tiles.png");
+
 
 }
 
@@ -69,7 +71,7 @@ a:hover, a:active, a:focus {
 
 .container {
   /* padding: 50px; */
-  margin-left: 200px;
+  margin-left: 300px;
   padding-left: 20px;
 
 }

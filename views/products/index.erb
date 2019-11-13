@@ -1,4 +1,4 @@
-<h3>stuff I've got<h3>
+<h3>stuff I've got <a href="/products/new"> ➕ </a> <h3>
 <table class="listTable">
 <tr>
   <th>name</th>
@@ -53,36 +53,13 @@
 </table>
 
 
-<h3> the shiney expensive stuff </h3>
-
-<table class="listTable-2">
-  <tr>
-      <th>Name</th>
-      <th>Price</th>
-  </tr>
-
-  <tr>
-
-<% @products_price_above_10 .each do |product| %>
-  <td>
-      <a href="/products/<%= product.id %>">  <%= product.name  %>
-      </a>
-  </td>
-  <td>
-    <%= product.price  %> 🥜
-  </td>
-  </tr>
-<% end %>
-</table>
 
 <br/>
-
-<h3> stuff that needs to be on sale </h3>
-
-<table class="listTable-2">
+<table class="listTable-2"><a id= "#sale"></a>
   <tr>
-      <th>Name</th>
-      <th>Stock</th>
+
+      <th colspan="2">stuff that needs to be on sale</th>
+
   </tr>
 
   <tr>
@@ -105,12 +82,11 @@
 </table>
 
 
+<br/>
 
-<h3> stuff that I need to import </h3>
-<table class="listTable-2">
+<table class="listTable-2"><a id= "#import"></a>
   <tr>
-      <th>Name</th>
-      <th>Stock</th>
+      <th colspan="2"> stuff that I need to import </th>
   </tr>
   <tr>
 <% @products_stock_below_2 .each do |product| %>
@@ -134,7 +110,7 @@
 <% end %>
 </table>
 
-<p><a href="/products/new"> ➕ </a></p>
+
 
 
 <br/>
