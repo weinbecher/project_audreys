@@ -53,23 +53,13 @@
 
 
 .submit-button input{
-  /* background: linear-gradient(to bottom,#fceff9 0%, #fceff9 40%, #eee8e4 100%);
-  font-weight: 200;
-  font-size: 15px;
-  margin-bottom:2px;
-  position: sticky;
-  top: 10px;
-  margin-right:10px;
-  border-radius:5px;
-  margin-bottom:5px;
-  padding: 3px; */
   background: linear-gradient(to bottom,#eee8e4 0%, #eae3dd 40%, #e5ddd6 100%);
   font-weight: 200;
   font-size: 15px;
   margin-bottom: 2px;
   position: sticky;
   top: 10px;
-  margin: 10px;
+  margin-right: 10px;
   left: 50%;
   }
 

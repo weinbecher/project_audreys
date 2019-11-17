@@ -1,10 +1,8 @@
 require_relative( "../models/farm.rb" )
 require_relative( "../models/product.rb" )
-require("pry-byebug")
 
 Product.delete_all()
 Farm.delete_all()
-
 
 farm1 = Farm.new({
   "name" => "Echo Valley Farm",
@@ -14,8 +12,6 @@ farm1 = Farm.new({
 
 farm1.save
 
-
-
 farm2 = Farm.new({
   "name" => "Kims Pumpkinhead Corp",
   "address" => " 67 Hallow Field , Sneep Snoop County ",
@@ -23,7 +19,6 @@ farm2 = Farm.new({
 })
 
 farm2.save
-
 
 farm3 = Farm.new({
   "name" => "You Got This Farm ",
@@ -57,8 +52,6 @@ product2 = Product.new({
 
 product2.save
 
-
-
 product3 = Product.new({
   "name" => "watermelon",
   "description" => "/watermelon.png",
@@ -70,9 +63,6 @@ product3 = Product.new({
 })
 
 product3.save
-
-
-
 
 product4 = Product.new({
   "name" => "apple",
@@ -86,7 +76,6 @@ product4 = Product.new({
 
 product4.save
 
-
 product5 = Product.new({
   "name" => "banana",
   "description" => "/banana.png",
@@ -98,9 +87,6 @@ product5 = Product.new({
 })
 
 product5.save
-
-
-
 
 product6 = Product.new({
   "name" => "lettuce",
@@ -114,7 +100,4 @@ product6 = Product.new({
 
 product6.save
 
-
-
-binding.pry
 return nil

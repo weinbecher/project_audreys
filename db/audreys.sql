@@ -19,5 +19,10 @@ CREATE TABLE products
   stock FLOAT,
   cost FLOAT,
   price FLOAT,
-  farm_id INT8 references farms(id) on delete cascade
-);
+  farm_id INT8 references farms(id)
+  -- 
+  -- farm_id INT8 CONSTRAINT fk_product
+  --         FOREIGN KEY (farm_id)
+  --         REFERENCES farms(id)
+  --         ON DELETE SET NULL
+)

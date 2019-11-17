@@ -4,7 +4,6 @@ class Product
   attr_reader :id
   attr_accessor :name, :description, :stock, :cost, :price, :farm_id
 
-
   def initialize(options)
     @id = options['id'].to_i
     @name = options['name']
@@ -36,7 +35,6 @@ class Product
 
   end
 
-
   def markup()
     @markup = @price - @cost
     return @markup
@@ -52,8 +50,6 @@ class Product
     values = [@name, @description, @stock, @cost, @price, @farm_id, @id]
     SqlRunner.run(sql,values)
   end
-
-
 
   def farm()
     farm = Farm.find(@farm_id)
@@ -77,7 +73,6 @@ class Product
     SqlRunner.run(sql)
   end
 
-
   def self.find(id)
     sql = "SELECT * From products WHERE id = $1"
     values = [id]
@@ -85,9 +80,6 @@ class Product
     result = Product.new(product.first)
     return result
   end
-
-
-
 
   def self.price_above_10
     products = Product.all
@@ -100,7 +92,6 @@ class Product
     return results
   end
 
-
   def self.stock_below_2
     products = Product.all
     results = []
@@ -112,7 +103,6 @@ class Product
     return results
     # always return results outside the loop unless you want to find something
   end
-
 
   def self.stock_above_10
     products = Product.all

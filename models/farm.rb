@@ -4,7 +4,6 @@ class Farm
   attr_reader :id
   attr_accessor :name, :address, :phone_num
 
-
   def initialize(options)
      @id = options['id'].to_i if options['id']
      @name = options['name']
@@ -29,7 +28,6 @@ class Farm
     @id = farm_data.first()['id'].to_i
   end
 
-
   def update()
     sql = "UPDATE farms SET (
     name, address, phone_num
@@ -41,7 +39,6 @@ class Farm
     values = [@name, @address, @phone_num, @id]
     SqlRunner.run(sql,values)
   end
-
 
   def delete
     sql = "DELETE FROM farms WHERE id = $1"
@@ -56,19 +53,16 @@ class Farm
   return results.map{ |product| Product.new(product) }
   end
 
-
   def self.all
     sql = "SELECT * FROM farms"
     farms = SqlRunner.run(sql)
     return farms.map {|farm| Farm.new(farm) }
   end
 
-
   def self.delete_all
     sql = "DELETE FROM farms"
     SqlRunner.run(sql)
   end
-
 
   def self.find(id)
     sql = "SELECT * FROM farms WHERE id = $1"
@@ -76,11 +70,5 @@ class Farm
     farm = SqlRunner.run(sql, values)
     result = Farm.new(farm.first)
     return result
-
   end
-
-
-
-
-
 end
