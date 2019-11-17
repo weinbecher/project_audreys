@@ -2,7 +2,7 @@ require('sinatra')
 require('sinatra/contrib/all') if development?
 require_relative('../models/product.rb')
 require_relative('../models/farm.rb')
-also_reload('../models/*')
+# also_reload('../models/*')
 
 
 get '/products' do

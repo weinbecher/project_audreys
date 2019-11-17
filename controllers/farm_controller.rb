@@ -2,7 +2,7 @@ require('sinatra')
 require('sinatra/contrib/all') if development?
 require_relative('../models/product.rb')
 require_relative('../models/farm.rb')
-also_reload('../models/*')
+# also_reload('../models/*')
 
 get '/farms' do
   @farms = Farm.all()
@@ -35,7 +35,6 @@ post '/farms/:id/delete' do
   @farm.delete()
   erb( :"farms/delete" )
 end
-
 
 post '/farms/:id' do
   farm = Farm.new(params)
